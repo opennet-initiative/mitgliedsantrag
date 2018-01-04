@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+	ServerName mitgliedsantrag.opennet-initiative.de
+	ServerAlias mitgliedsantrag.on-i.de
+	ServerAlias mitgliedsantrag.on
+	ServerAlias mitgliedsantrag.rostock.freifunk.net
+	ServerAlias mitgliedsantrag.schwerin.freifunk.net
+	ServerAlias mitgliedsantrag.wismar.freifunk.net
+	ServerAdmin admin@opennet-initiative.de
+        DocumentRoot /var/www/htdocs/mitgliedsantrag.opennet-initiative.de/www
+	RewriteEngine On
+	RewriteRule ^/api/ /api/api.php
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride AuthConfig
+	</Directory>
+	<Directory /var/www/htdocs/mitgliedsantrag.opennet-initiative.de/www>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride AuthConfig
+		Order allow,deny
+		allow from all
+	</Directory>
+        ErrorLog /var/log/apache2/error.log
+	LogLevel warn
+        CustomLog /var/log/apache2/mitgliedsantrag.log combined
+</VirtualHost>

@@ -1,0 +1,5 @@
+For development you need to send and receive emails. Therefore a local email setup is needed.
+
+To setup local mail setup on debian
+- postfix: https://gist.github.com/raelgc/6031274
+- thunderbird: https://support.mozilla.org/en-US/kb/display-thunderbird-menus-and-toolbar

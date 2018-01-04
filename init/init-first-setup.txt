@@ -1,0 +1,24 @@
+steps for first installation
+----------------------------
+
+Install debian packages:
+- apache2 + php
+- pdftk
+- libphp-phpmailer
+
+git clone of this repo
+ git clone https://github.com/leoss/on_mitgliedsantrag.git /var/www/htdocs/mitgliedsantrag.opennet-initiative.de
+
+create folder /var/www/mitgliedsantrag_upload and make it read/writeable for apache user
+ mkdir /var/www/mitgliedsantrag_upload
+ chown www-data:www-data /var/www/mitgliedsantrag_upload
+
+copy (or symlink) apache config
+ e.g.
+ sudo ln -s apache_config/mitgliedsantrag /etc/apache2/sites-available/mitgliedsantrag
+ sudo ln -s /etc/apache2/sites-available/mitgliedsantrag /etc/apache2/sites-enabled/mitgliedsantrag
+ service apache2 restart
+
+create cronjob (see cronjob-delete-old-uploads.txt)
+
+

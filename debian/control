@@ -2,6 +2,7 @@ Source: on-mitgliedsantrag
 Section: net
 Priority: optional
 Maintainer: Martin Garbe <monomartin@opennet-iniative.de>
+Build-Depends: debhelper (>=9)
 Standards-Version: 4.0.0
 Homepage: https://wiki.opennet-initiative.de/wiki/Opennet_Mitgliedsantrag
 Vcs-Git: https://dev.opennet-initiative.de/git/on_mitgliedsantrag.git

@@ -1,0 +1,7 @@
+This package contains configuration files for apache2 for serving ONI Mitgliedsantrag.
+
+Enable the necessary components and restart apache:
+ ...
+
+Configuration:
+* ...

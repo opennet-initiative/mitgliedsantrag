@@ -3,20 +3,13 @@ include makefilet-download-ondemand.mk
 default: help
 
 
-help: help-on-map
+help: help-on-mitgliedsantrag
 
-.PHONY: help-on-map
-help-on-map:
-	@echo "on-map packaging targets:"
+.PHONY: help-on-mitgliedsantrag
+help-on-mitgliedsantrag:
+	@echo "on-mitgliedsantrag packaging targets:"
 	@echo "    deploy-deb-remote"
-	@echo "    style"
 	@echo
-
-
-.PHONY: style
-style:
-	js-beautify static/onimaps.js
-
 
 .PHONY: deploy-deb-remote
 deploy-deb-remote: dist-deb-packages-directory
@@ -25,5 +18,5 @@ deploy-deb-remote: dist-deb-packages-directory
 		exit 1; fi
 	scp "$(DIR_DEBIAN_SIMPLIFIED_PACKAGE_FILES)"/*.deb "$(DEPLOY_TARGET):/tmp/"
 	ssh "$(DEPLOY_TARGET)" \
-		'for fname in on-map; do \
+		'for fname in on-mitgliedsantrag; do \
 			dpkg -i "/tmp/$$fname.deb" && rm "/tmp/$$fname.deb" || exit 1; done'

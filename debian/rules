@@ -1,5 +1,11 @@
 #!/usr/bin/make -f
 
-
 %:
 	dh $@
+
+override_dh_install:
+	dh_install
+	install -d -o www-data -g www-data $(CURDIR)/debian/on-mitgliedsantrag/var/www/mitgliedsantrag_upload
+
+override_dh_fixperms:
+	dh_fixperms --exclude mitgliedsantrag_upload

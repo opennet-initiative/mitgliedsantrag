@@ -18,5 +18,3 @@ copy (or symlink) apache config
  sudo ln -s apache_config/mitgliedsantrag /etc/apache2/sites-available/mitgliedsantrag
  sudo ln -s /etc/apache2/sites-available/mitgliedsantrag /etc/apache2/sites-enabled/mitgliedsantrag
  service apache2 restart
-
-create cronjob (see cronjob-delete-old-uploads.txt)

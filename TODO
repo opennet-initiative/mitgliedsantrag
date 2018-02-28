@@ -1,3 +1,3 @@
 = TODO =
-
+* debian-doc-examples: hier alle Pfade anpassen, welche sich durch Debianisierung geändert haben
 * php-iban als einzelnes Debian Paket auslagern

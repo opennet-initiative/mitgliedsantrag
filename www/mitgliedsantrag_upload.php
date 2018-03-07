@@ -332,7 +332,7 @@ if ($_POST["opennetid"]) {
 }
 // get data - mailconfirm
 if ($_POST["mailconfirm"]) {
-  $opt_mailconfirm = $_POST["opennetid"];
+  $opt_mailconfirm = 1;
 } else {
   $opt_mailconfirm = "";
   if ($debug) echo "<li>Mailconfirm not found, set to empty string</li>";

@@ -4,6 +4,7 @@ build/
 dist/
 debian/on-mitgliedsantrag/
 debian/.debhelper/
+debian/files
 
 debian/on-mitgliedsantrag.debhelper.log
 debian/on-mitgliedsantrag.substvars

@@ -1,5 +1,11 @@
-on-mitgliedsantrag (1.0) UNRELEASED; urgency=medium
+on-mitgliedsantrag (1.1) artful; urgency=medium
+
+  * fixed bug: attachment in email was missing. 
+
+ -- Martin Garbe <leo@lini.local>  Wed, 07 Mar 2018 21:59:09 +0100
+
+on-mitgliedsantrag (1.0) artful; urgency=medium
 
   * Initial release.
 
- -- Martin Garbe <leo@lini.local>  Sat, 06 Jan 2018 20:48:06 +0100
+ -- Martin Garbe <leo@lini.local>  Wed, 07 Mar 2018 21:55:44 +0100

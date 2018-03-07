@@ -7,5 +7,8 @@ Notes for Building:
 * install .deb on remote server via 'DEPLOY_TARGET=$SERVER make deploy-deb-remote'
 
 Todo for Building:
-* test 'make upload-deb', wenn makefilet genutzt wird
+* make dist-deb
+* deb-Paket auf einem entfernten Host installieren:
+   make deploy-deb-remote DEPLOY_TARGET=root@example.on
 * bumbversion testen für einfache Release-Erstellung https://notabug.org/sumpfralle/makefilet/src/master/USAGE.md weil sonst mehrere Changelogs synchron halten per Hand
+* test 'make upload-deb', wenn makefilet genutzt wird

@@ -1,3 +1,9 @@
+on-mitgliedsantrag (1.2) bionic; urgency=medium
+
+  * added link to Datenschutzerklärung 
+
+ -- Martin Garbe <leo@lini.local>  Wed, 23 May 2018 21:39:00 +0200
+
 on-mitgliedsantrag (1.1) artful; urgency=medium
 
   * fixed bug: attachment in email was missing. 

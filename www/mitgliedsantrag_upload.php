@@ -366,7 +366,7 @@ if ($error > 0) {
   echo "<p><a href=\"#\" onclick=\"history.back();\">Eingabe pr&uuml;fen / Review input</a></p>";
 } else {
   // prepare metadata
-  echo "<p>Dein Mitgliedsantrag ist angekommen. Your membership application arrived.</p>";
+  echo "<p>Dein Mitgliedsantrag ist angekommen, jedoch <b>fehlt</b> noch eine <b>Unterschrift</b>. Your membership application arrived but signature is missing.</p>";
   $timestamp = time();
   $json = array(
     "meta_type"=>"Opennet_Mitgliedsantrag_JSON_v1", "meta_created"=>$timestamp,
@@ -415,7 +415,7 @@ if ($error > 0) {
     exit;
   }
   if ($debug) echo "<tr><td>JSON:</td><td>done, " . $filename . ".json</td></tr>";
-  echo "<p><strong>Erfolgreich</strong>: Gespeichert als " . $digest . "<br/><strong>Success</strong>: Stored as " . $digest . "</p>";
+
   // store fdf
   $fdf = array2xfdf($_POST, $templatefile);
   $fdffile = $uploadFolder . "/" . $filename . ".xfdf";
@@ -425,6 +425,7 @@ if ($error > 0) {
   $pdffile = $uploadFolder . "/" . $filename . ".pdf";
   exec("pdftk ".$templatefile." fill_form ".$fdffile." output ".$pdffile." flatten");
   if ($debug) echo "<tr><td>PDF:</td><td>done, " . $filename . ".pdf</td></tr>";
+
   // send mail to Mitgliederverwaltung team
   $mailtext = "A new membership application arrived.\r\n".
     "Eine neuer Mitgliedsantrag ist eingetroffen.\r\n\r\n".
@@ -443,9 +444,12 @@ if ($error > 0) {
   } else {
     if ($debug) echo "<tr><td>Approval mail:</td><td>done, " . $mailto . "</td></tr>";
   }
+
   // show download link
-  echo "<p><a href=\"" . $pdfurl . $filename_short . "\">Mitgliedsantrag herunterladen / Download membership application</a></p>";
+  echo "<p><a href=\"" . $pdfurl . $filename_short . "\">Mitgliedsantrag herunterladen und <b>unterschreiben</b> / Download membership application and <b>sign</b></a></p>";
+  echo "<p>Antrag gespeichert als " . $digest . "<br/>Application stored as " . $digest . "</p>";
   if ($debug) echo "<tr><td>Download link:</td><td>done, " . $filename_short . "</td></tr>";
+
   // send mail to applicant
   if ($opt_mail) {
     $mailtext = "Your membership application arrived.\r\nDein Mitgliedsantrag ist eingetroffen.\r\n\r\n"

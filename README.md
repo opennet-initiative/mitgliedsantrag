@@ -9,7 +9,7 @@ Notes for Building:
 build new version
  cat debian/changelog     #get last version number
  dch -v $YOUR_NEW_VERSION_NUMBER$
- dhcp -r
+ dcp -r
  rm ../on-mitgliedsantrag_*.deb   #delete old deb files
  debuild -us -uc
  scp ../on-mitgliedsantrag_*.deb amano:/tmp/

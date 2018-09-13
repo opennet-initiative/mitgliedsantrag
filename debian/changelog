@@ -1,3 +1,9 @@
+on-mitgliedsantrag (1.3) bionic; urgency=medium
+
+  * make the need to sign the document more explicit 
+
+ -- Martin Garbe <leo@lini.local>  Thu, 13 Sep 2018 21:41:21 +0200
+
 on-mitgliedsantrag (1.2) bionic; urgency=medium
 
   * added link to Datenschutzerklärung 

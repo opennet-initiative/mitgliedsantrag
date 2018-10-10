@@ -14,3 +14,4 @@ build new version
  debuild -us -uc
  scp ../on-mitgliedsantrag_*.deb amano:/tmp/
  ssh amano "dpkg -i /tmp/on-mitgliedsantrag_*.deb ; rm /tmp/on-mitgliedsantrag_*.deb"
+

@@ -8,7 +8,11 @@
  */
 
 require_once("php-iban/php-iban.php");
-require_once("libphp-phpmailer/class.phpmailer.php"); //should be installed via OS package. Access via php include path variable (see php.ini)
+//'libphp-phpmailer' should be installed via OS package. Access via php include path variable (see php.ini)
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'libphp-phpmailer/src/Exception.php';
+require 'libphp-phpmailer/src/PHPMailer.php';
 
 // config variables
 $debug = false;

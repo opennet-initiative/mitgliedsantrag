@@ -1,3 +1,9 @@
+on-mitgliedsantrag (1.5) bionic; urgency=medium
+
+  * new dependency pdftk-java instead of old pdftk 
+
+ -- Martin Garbe <leo@lini.local>  Mon, 28 Oct 2019 23:07:08 +0100
+
 on-mitgliedsantrag (1.4) bionic; urgency=medium
 
   * compatible with new libphpmailer version 

@@ -10,7 +10,7 @@ Vcs-Browser: http://dev.opennet-initiative.de/browser/on_mitgliedsantrag
 
 Package: on-mitgliedsantrag
 Architecture: all
-Depends: pdftk, libphp-phpmailer, libapache2-mod-php | libapache2-mod-fcgid, ${misc:Depends}
+Depends: pdftk-java, libphp-phpmailer, libapache2-mod-php | libapache2-mod-fcgid, ${misc:Depends}
 Suggests: apache2, php
 Description: Mitgliedsantrag für die Opennet Initiative.
  Angehende Mitglieder müssen dieses Online Formular ausfüllen,

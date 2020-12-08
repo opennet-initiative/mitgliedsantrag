@@ -12,6 +12,7 @@ build new version
  dcp -r
  rm ../on-mitgliedsantrag_*.deb   #delete old deb files
  debuild -us -uc
+ scp ../on-mitgliedsantrag_*.deb ruri:/var/www/downloads.opennet-initiative.de/debian/
  scp ../on-mitgliedsantrag_*.deb amano:/tmp/
  ssh amano "dpkg -i /tmp/on-mitgliedsantrag_*.deb ; rm /tmp/on-mitgliedsantrag_*.deb"
 

@@ -1,3 +1,9 @@
+on-mitgliedsantrag (1.6) focal; urgency=medium
+
+  * change url of documents 
+
+ -- Martin Garbe <martin@tuxi>  Wed, 10 Mar 2021 21:57:41 +0100
+
 on-mitgliedsantrag (1.5) bionic; urgency=medium
 
   * new dependency pdftk-java instead of old pdftk 

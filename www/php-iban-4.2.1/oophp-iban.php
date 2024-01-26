@@ -1,7 +1,10 @@
 <?php
+namespace PHP_IBAN;
 
 # OO wrapper for 'php-iban.php'
 Class IBAN {
+
+ public $iban;
 
  function __construct($iban = '') {
   require_once('php-iban.php'); # load the procedural codebase
@@ -34,6 +37,10 @@ Class IBAN {
 
  public function HumanFormat() {
   return iban_to_human_format($this->iban);
+ }
+
+ public function ObfuscatedFormat() {
+  return iban_to_obfuscated_format($this->iban);
  }
 
  public function Country($iban='') {
@@ -103,6 +110,8 @@ Class IBAN {
 
 # IBANCountry
 Class IBANCountry {
+
+ public $code;
 
  # constructor with code
  function __construct($code = '') {
@@ -213,6 +222,13 @@ Class IBANCountry {
   return iban_country_get_central_bank_name($this->code);
  }
 
+ public function Membership() {
+  return iban_country_get_membership($this->code);
+ }
+
+ public function IsEuMember() {
+  return iban_country_get_is_eu_member($this->code);
+ }
 }
 
 ?>

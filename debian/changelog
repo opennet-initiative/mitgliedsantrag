@@ -1,3 +1,9 @@
+on-mitgliedsantrag (1.7) focal; urgency=medium
+
+  * bump php-iban to v4.2.1 release
+
+ -- Mathias Mahnke <mathias@opennet>  Fri, 26 Jan 2024 21:16:92 +0100
+
 on-mitgliedsantrag (1.6) focal; urgency=medium
 
   * change url of documents 
